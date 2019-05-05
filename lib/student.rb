@@ -18,7 +18,7 @@ def self.create_table
       name TEXT,
       grade TEXT)
       SQL
-  DB[:conn].excecute(sql)
+  DB[:conn].execute(sql)
 end
 
 end
