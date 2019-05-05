@@ -11,4 +11,14 @@ def initialize(name,grade,id=nil)
   @id = id
 end
 
+def self.create_table
+  sql = <<-SQL
+    CREATE TABLE IF NONE EXISTS students (
+      id INTEGER PRIIMARY KEY,
+      name TEXT,
+      grade TEXT)
+      SQL
+  DB[:conn].excecute(sql)
+end
+
 end
